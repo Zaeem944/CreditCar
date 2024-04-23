@@ -1,22 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const ConfirmationPage = styled.div`
-  background-color: #ffffff;
+const ConfirmationPageContainer = styled.div`
+  background-color: #f0f8ff; /* Light turquoise background */
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 `;
 
 const ConfirmationBubble = styled.div`
-  background-color: #f0f8ff; /* Light turquoise background */
-  padding: 20px;
+  background-color: #ffffff;
+  padding: 40px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 400px;
-  width: 100%;
   text-align: center;
 `;
 
@@ -26,21 +25,34 @@ const ConfirmationMessage = styled.p`
   margin-bottom: 20px;
 `;
 
-const Confirmation = () => {
+const StyledLink = styled(Link)`
+  background-color: #00ced1; /* Turquoise */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+
+  &:hover {
+    background-color: #008b8b; /* Darker turquoise on hover */
+    transform: scale(1.05); /* Increased size on hover */
+  }
+`;
+
+const ConfirmationPage = () => {
   return (
-    <>
-    
-    <ConfirmationPage>
+    <ConfirmationPageContainer>
       <ConfirmationBubble>
         <ConfirmationMessage>
           Your request has been processed. Our representatives will contact you in the near future for further details.
         </ConfirmationMessage>
+        <StyledLink to="/home">Back to Home</StyledLink>
       </ConfirmationBubble>
-    </ConfirmationPage>
-
-    
-    </>
+    </ConfirmationPageContainer>
   );
 };
 
-export default Confirmation;
+export default ConfirmationPage;

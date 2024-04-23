@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Car1 from '../design/assets/image1.jpg';
 import Car2 from '../design/assets/image2.jpg';
+import Car3 from '../design/assets/image3.jpg';
+import Car4 from '../design/assets/image4.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const AvailableCarsPage = styled.div`
   background-color: #ffffff;
@@ -74,6 +77,7 @@ const Input = styled.input`
 `;
 
 const AvailableCars = () => {
+  const navigate = useNavigate();
   const [cars] = useState([
     {
       id: 1,
@@ -91,6 +95,22 @@ const AvailableCars = () => {
       availability: 'Available from 2024-04-27',
       location: 'Los Angeles',
     },
+    {
+      id: 3,
+      image: Car3,
+      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      price: '$70 per day',
+      availability: 'Available from 2024-04-30',
+      location: 'Chicago', // New car location
+    },
+    {
+      id: 4,
+      image: Car4,
+      description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      price: '$80 per day',
+      availability: 'Available from 2024-05-02',
+      location: 'Miami', // New car location
+    },
     // Add more cars as needed
   ]);
 
@@ -100,6 +120,7 @@ const AvailableCars = () => {
     const confirmation = window.confirm('Are you sure you want to rent this car?');
     if (confirmation) {
       console.log(`Renting car: ${car.id}`);
+      navigate('/confirmation')
     }
   };
 

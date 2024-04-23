@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const AddCarPage = styled.div`
   background-color: #ffffff;
@@ -62,6 +63,7 @@ const Button = styled.button`
 `;
 
 const AddCar = () => {
+  const navigate = useNavigate();
   const [ownerName, setOwnerName] = useState('');
   const [carName, setCarName] = useState('');
   const [carModel, setCarModel] = useState('');
@@ -73,6 +75,8 @@ const AddCar = () => {
     e.preventDefault();
     // Handle form submission, e.g., sending data to backend
     console.log('Form submitted:', { ownerName, carName, carModel, carDescription, location, images });
+    navigate('/confirmation');
+  
   };
 
   const handleImageChange = (e) => {
