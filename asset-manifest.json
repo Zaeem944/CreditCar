@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/CreditCar/static/css/main.db62923b.css",
+    "main.js": "/CreditCar/static/js/main.9c1722c6.js",
+    "static/js/453.3d443fe2.chunk.js": "/CreditCar/static/js/453.3d443fe2.chunk.js",
+    "static/media/image4.jpg": "/CreditCar/static/media/image4.1329f95c5db1fd323e4a.jpg",
+    "static/media/image3.jpg": "/CreditCar/static/media/image3.ef0e3b8bc037d862dcdf.jpg",
+    "static/media/logo.svg": "/CreditCar/static/media/logo.a1cbf5f5c10ea1be0c919a4aa5ae1bc6.svg",
+    "static/media/image2.jpg": "/CreditCar/static/media/image2.4438e9d706ca8f63c48c.jpg",
+    "static/media/image1.jpg": "/CreditCar/static/media/image1.677ba6283a04cd3ffd60.jpg",
+    "index.html": "/CreditCar/index.html",
+    "main.db62923b.css.map": "/CreditCar/static/css/main.db62923b.css.map",
+    "main.9c1722c6.js.map": "/CreditCar/static/js/main.9c1722c6.js.map",
+    "453.3d443fe2.chunk.js.map": "/CreditCar/static/js/453.3d443fe2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db62923b.css",
+    "static/js/main.9c1722c6.js"
+  ]
+}
