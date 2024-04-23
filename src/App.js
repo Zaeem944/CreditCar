@@ -21,11 +21,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login/>} />
-        <Route path="/confirmation" element={<Confirmation/>} />
-        <Route path="/home" element={<Layout><Home /></Layout>} />
-        <Route path="/rentACar" element={<Layout><AvailableCars /></Layout>} />
-        <Route path="/addACar" element={<Layout><AddCar /></Layout>} />
+        <Route path="https://zaeem944.github.io/CreditCar/driving-app/" element={<Login/>} />
+        <Route path="https://zaeem944.github.io/CreditCar/driving-app/confirmation" element={<Confirmation/>} />
+        <Route path="https://zaeem944.github.io/CreditCar/driving-app/home" element={<Layout><Home /></Layout>} />
+        <Route path="https://zaeem944.github.io/CreditCar/driving-app/rentACar" element={<Layout><AvailableCars /></Layout>} />
+        <Route path="https://zaeem944.github.io/CreditCar/driving-app/addACar" element={<Layout><AddCar /></Layout>} />
       </Routes>
     
     </BrowserRouter>
