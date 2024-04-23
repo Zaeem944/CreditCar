@@ -62,7 +62,7 @@ const Login = () => {
     e.preventDefault();
     // Validate email and password (not implemented for simplicity)
     // Move to the next page regardless of credentials
-    navigate('/home');
+    navigate('/CreditCar/home');
   };
 
   return (
