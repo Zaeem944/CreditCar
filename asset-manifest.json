@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/CreditCar/static/css/main.db62923b.css",
-    "main.js": "/CreditCar/static/js/main.6b9a4603.js",
+    "main.js": "/CreditCar/static/js/main.6c7da1e9.js",
     "static/js/453.3d443fe2.chunk.js": "/CreditCar/static/js/453.3d443fe2.chunk.js",
     "static/media/image4.jpg": "/CreditCar/static/media/image4.1329f95c5db1fd323e4a.jpg",
     "static/media/image3.jpg": "/CreditCar/static/media/image3.ef0e3b8bc037d862dcdf.jpg",
@@ -10,11 +10,11 @@
     "static/media/image1.jpg": "/CreditCar/static/media/image1.677ba6283a04cd3ffd60.jpg",
     "index.html": "/CreditCar/index.html",
     "main.db62923b.css.map": "/CreditCar/static/css/main.db62923b.css.map",
-    "main.6b9a4603.js.map": "/CreditCar/static/js/main.6b9a4603.js.map",
+    "main.6c7da1e9.js.map": "/CreditCar/static/js/main.6c7da1e9.js.map",
     "453.3d443fe2.chunk.js.map": "/CreditCar/static/js/453.3d443fe2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db62923b.css",
-    "static/js/main.6b9a4603.js"
+    "static/js/main.6c7da1e9.js"
   ]
 }
