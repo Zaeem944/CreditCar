@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Background from '../design/assets/background2.jpeg';
 
 const LoginPage = styled.div`
   position: relative; /* Position relative for absolute positioning of background */
@@ -66,29 +67,56 @@ const SubmitButton = styled.button`
   }
 `;
 
+const SignupLink = styled(Link)`
+  color: #00ced1; /* Turquoise */
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const Login = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Validate email and password (not implemented for simplicity)
+    // Validate phone number and password (not implemented for simplicity)
     // Move to the next page regardless of credentials
     navigate('/home');
   };
 
   return (
-    <LoginPage>
+    <LoginPage style={{
+      backgroundImage: `url(${Background})`,
+      margin: '0',
+      padding: '0',
+      boxSizing: 'border-box',
+
+      width: '100%',
+      height: '20vh',
+      backgroundSize: 'cover',
+
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+
+    
+    }}>
       <LoginForm onSubmit={handleSubmit}>
         <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Login to CreditCar</h1>
         <FormField>
-          <Label htmlFor="email">Email:</Label>
+          <Label htmlFor="phoneNumber">Phone Number:</Label>
           <Input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="tel"
+            id="phoneNumber"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
             required
           />
         </FormField>
@@ -103,6 +131,7 @@ const Login = () => {
           />
         </FormField>
         <SubmitButton type="submit">Login</SubmitButton>
+        <SignupLink to="/signup">New user? Sign up here</SignupLink>
       </LoginForm>
     </LoginPage>
   );

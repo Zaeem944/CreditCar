@@ -3,16 +3,16 @@ import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
 const AddCarPage = styled.div`
-  background-color: #ffffff;
+  background-color: #f0f8ff; /* Light turquoise background */
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; /* Align content vertically */
+  padding: 20px;
 `;
 
 const Form = styled.form`
-  background-color: #f0f8ff; /* Light turquoise background */
+  background-color: #ffffff;
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -44,6 +44,7 @@ const TextArea = styled.textarea`
   border: 1px solid #cccccc;
   border-radius: 4px;
   font-size: 16px;
+  resize: vertical; /* Allow vertical resizing */
 `;
 
 const Button = styled.button`
@@ -76,7 +77,6 @@ const AddCar = () => {
     // Handle form submission, e.g., sending data to backend
     console.log('Form submitted:', { ownerName, carName, carModel, carDescription, location, images });
     navigate('/confirmation');
-  
   };
 
   const handleImageChange = (e) => {
@@ -86,8 +86,8 @@ const AddCar = () => {
 
   return (
     <AddCarPage>
-      <h1>Add a Car for Rental</h1>
       <Form onSubmit={handleSubmit}>
+        <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Add a Car for Rental</h1>
         <FormGroup>
           <Label htmlFor="ownerName">Owner Name:</Label>
           <Input
@@ -125,6 +125,7 @@ const AddCar = () => {
             value={carDescription}
             onChange={(e) => setCarDescription(e.target.value)}
             required
+            rows={4} // Set the initial number of rows
           />
         </FormGroup>
         <FormGroup>

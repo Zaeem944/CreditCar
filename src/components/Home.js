@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import Background from '../design/assets/background2.jpeg';
 
 const HomePage = styled.div`
   background-color: #ffffff;
@@ -68,11 +69,32 @@ const Home = () => {
   };
 
   return (
-    <HomePage>
-      <div>
+    <HomePage style={{
+      backgroundImage: `url(${Background})`,
+      margin: '0',
+      padding: '0',
+      boxSizing: 'border-box',
+
+      width: '100%',
+      height: '10%',
+      backgroundSize: 'cover',
+
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+    }}>
+      <div style={{
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
+        backdropFilter: 'blur(10px)',
+        padding: '40px',
+        borderRadius: '8px',
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+        textAlign: 'center',
+        maxWidth: '600px',
+      
+      }}>
         <BiggerHeading>Welcome to CreditCar</BiggerHeading>
         <HeadingsContainer>
-          <Welcome>Welcome John</Welcome>
+          <Welcome>Welcome Huzaifa</Welcome>
           <Heading>Will you be renting a car, or adding one?</Heading>
         </HeadingsContainer>
         <Button onClick={handleAddCarClick}>Add Car as Rental</Button>

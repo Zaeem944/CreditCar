@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import Car1 from '../design/assets/image1.jpg';
-import Car2 from '../design/assets/image2.jpg';
-import Car3 from '../design/assets/image3.jpg';
-import Car4 from '../design/assets/image4.jpg';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import styled from "styled-components";
+import Car1 from "../design/assets/image1.jpg";
+import Car2 from "../design/assets/image2.jpg";
+import Car3 from "../design/assets/image3.jpg";
+import Car4 from "../design/assets/image4.jpg";
+import { useNavigate } from "react-router-dom";
+import Background from "../design/assets/background2.jpeg";
 
 const AvailableCarsPage = styled.div`
   background-color: #ffffff;
@@ -82,45 +83,47 @@ const AvailableCars = () => {
     {
       id: 1,
       image: Car1,
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      price: '$50 per day',
-      availability: 'Available from 2024-04-25',
-      location: 'New York',
+      description: "Luxurious sedan with leather seats, GPS navigation, and sunroof.",
+      price: "5000Rs per day",
+      availability: "Available from 2024-04-25",
+      location: "Cantt",
     },
     {
       id: 2,
       image: Car2,
-      description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      price: '$60 per day',
-      availability: 'Available from 2024-04-27',
-      location: 'Los Angeles',
+      description: "Compact SUV perfect for outdoor adventures, with spacious interior and all-wheel drive.",
+      price: "3000Rs per day",
+      availability: "Available from 2024-04-27",
+      location: "Bahria Town",
     },
     {
       id: 3,
       image: Car3,
-      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      price: '$70 per day',
-      availability: 'Available from 2024-04-30',
-      location: 'Chicago', // New car location
+      description: "Efficient hybrid sedan with fuel-saving technology and advanced safety features.",
+      price: "4000 Rs per day",
+      availability: "Available from 2024-04-30",
+      location: "Model Town", // New car location
     },
     {
       id: 4,
       image: Car4,
-      description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-      price: '$80 per day',
-      availability: 'Available from 2024-05-02',
-      location: 'Miami', // New car location
+      description: "Luxury sports car with high-performance engine and sleek design, perfect for thrill-seekers.",
+      price: "7000Rs per day",
+      availability: "Available from 2024-05-02",
+      location: "Gulberg", // New car location
     },
     // Add more cars as needed
   ]);
 
-  const [searchLocation, setSearchLocation] = useState('');
+  const [searchLocation, setSearchLocation] = useState("");
 
   const handleRentCar = (car) => {
-    const confirmation = window.confirm('Are you sure you want to rent this car?');
+    const confirmation = window.confirm(
+      "Are you sure you want to rent this car?"
+    );
     if (confirmation) {
       console.log(`Renting car: ${car.id}`);
-      navigate('/confirmation')
+      navigate("/confirmation");
     }
   };
 
@@ -129,27 +132,43 @@ const AvailableCars = () => {
   );
 
   return (
-    <AvailableCarsPage>
-      <h1>Available Cars for Rent</h1>
-      <Input
-        type="text"
-        placeholder="Search by location..."
-        value={searchLocation}
-        onChange={(e) => setSearchLocation(e.target.value)}
-      />
-      <CardContainer>
-        {filteredCars.map((car) => (
-          <Card key={car.id}>
-            <Image src={car.image} alt={`Car ${car.id}`} />
-            <Description>{car.description}</Description>
-            <Price>{car.price}</Price>
-            <Availability>{car.availability}</Availability>
-            <p>Location: {car.location}</p> {/* Added location display */}
-            <Button onClick={() => handleRentCar(car)}>Rent it!</Button>
-          </Card>
-        ))}
-      </CardContainer>
-    </AvailableCarsPage>
+    <div
+      style={{
+        backgroundImage: `url(${Background})`,
+        margin: "0",
+        padding: "0",
+        boxSizing: "border-box",
+
+        width: "100%",
+        height: "20vh",
+        backgroundSize: "cover",
+
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <AvailableCarsPage>
+        <h1>Available Cars for Rent</h1>
+        <Input
+          type="text"
+          placeholder="Search by location..."
+          value={searchLocation}
+          onChange={(e) => setSearchLocation(e.target.value)}
+        />
+        <CardContainer>
+          {filteredCars.map((car) => (
+            <Card key={car.id}>
+              <Image src={car.image} alt={`Car ${car.id}`} />
+              <Description>{car.description}</Description>
+              <Price>{car.price}</Price>
+              <Availability>{car.availability}</Availability>
+              <p>Location: {car.location}</p> {/* Added location display */}
+              <Button onClick={() => handleRentCar(car)}>Rent it!</Button>
+            </Card>
+          ))}
+        </CardContainer>
+      </AvailableCarsPage>
+    </div>
   );
 };
 

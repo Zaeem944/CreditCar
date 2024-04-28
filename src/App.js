@@ -7,6 +7,7 @@ import NavbarComp from './components/NavbarComp';
 import AvailableCars from './components/AvailableCars';
 import AddCar from './components/AddCar';
 import Confirmation from './components/Confirmation';
+import Signup from './components/Signup';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login/>} />
+        <Route path="/signup" element={<Signup/>} />
         <Route path="/confirmation" element={<Confirmation/>} />
         <Route path="/home" element={<Layout><Home /></Layout>} />
         <Route path="/rentACar" element={<Layout><AvailableCars /></Layout>} />

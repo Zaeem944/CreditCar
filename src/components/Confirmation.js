@@ -44,14 +44,17 @@ const StyledLink = styled(Link)`
 
 const ConfirmationPage = () => {
   return (
+    <div>
+
     <ConfirmationPageContainer>
       <ConfirmationBubble>
         <ConfirmationMessage>
-          Your request has been processed. Our representatives will contact you in the near future for further details.
+          Your request has been processed. Our AI assitant will get back to you shortly.
         </ConfirmationMessage>
         <StyledLink to="/home">Back to Home</StyledLink>
       </ConfirmationBubble>
     </ConfirmationPageContainer>
+    </div>
   );
 };
 
