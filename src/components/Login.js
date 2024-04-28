@@ -3,11 +3,24 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const LoginPage = styled.div`
-  background-color: #ffffff;
+  position: relative; /* Position relative for absolute positioning of background */
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* Background with blur effect */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    backdrop-filter: blur(8px); /* Blur effect */
+    z-index: -1; /* Behind other content */
+  }
 `;
 
 const LoginForm = styled.form`
@@ -62,7 +75,7 @@ const Login = () => {
     e.preventDefault();
     // Validate email and password (not implemented for simplicity)
     // Move to the next page regardless of credentials
-    navigate('/CreditCar/home');
+    navigate('/home');
   };
 
   return (

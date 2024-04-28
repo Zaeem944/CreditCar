@@ -75,7 +75,7 @@ const AddCar = () => {
     e.preventDefault();
     // Handle form submission, e.g., sending data to backend
     console.log('Form submitted:', { ownerName, carName, carModel, carDescription, location, images });
-    navigate('/CreditCar/confirmation');
+    navigate('/confirmation');
   
   };
 

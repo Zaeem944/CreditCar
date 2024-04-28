@@ -120,7 +120,7 @@ const AvailableCars = () => {
     const confirmation = window.confirm('Are you sure you want to rent this car?');
     if (confirmation) {
       console.log(`Renting car: ${car.id}`);
-      navigate('/CreditCar/confirmation')
+      navigate('/confirmation')
     }
   };
 

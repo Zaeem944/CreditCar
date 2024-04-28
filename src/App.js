@@ -21,11 +21,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/CreditCar/" element={<Login/>} />
-        <Route path="/CreditCar/confirmation" element={<Confirmation/>} />
-        <Route path="/CreditCar/home" element={<Layout><Home /></Layout>} />
-        <Route path="/CreditCar/rentACar" element={<Layout><AvailableCars /></Layout>} />
-        <Route path="/CreditCar/addACar" element={<Layout><AddCar /></Layout>} />
+        <Route path="/" element={<Login/>} />
+        <Route path="/confirmation" element={<Confirmation/>} />
+        <Route path="/home" element={<Layout><Home /></Layout>} />
+        <Route path="/rentACar" element={<Layout><AvailableCars /></Layout>} />
+        <Route path="/addACar" element={<Layout><AddCar /></Layout>} />
       </Routes>
     
     </BrowserRouter>

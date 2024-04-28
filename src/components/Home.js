@@ -58,13 +58,13 @@ const Home = () => {
   const handleAddCarClick = () => {
     // Handle "Add car as Rental" button click
     // For now, just navigate to the login page
-    navigate('/CreditCar/addACar');
+    navigate('/addACar');
   };
 
   const handleSearchCarClick = () => {
     // Handle "Search Car Rental" button click
     // For now, just navigate to the login page
-    navigate('/CreditCar/rentACar');
+    navigate('/rentACar');
   };
 
   return (

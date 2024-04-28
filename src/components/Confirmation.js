@@ -49,7 +49,7 @@ const ConfirmationPage = () => {
         <ConfirmationMessage>
           Your request has been processed. Our representatives will contact you in the near future for further details.
         </ConfirmationMessage>
-        <StyledLink to="/CreditCar/home">Back to Home</StyledLink>
+        <StyledLink to="/home">Back to Home</StyledLink>
       </ConfirmationBubble>
     </ConfirmationPageContainer>
   );
