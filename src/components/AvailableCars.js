@@ -84,7 +84,7 @@ const AvailableCars = () => {
       id: 1,
       image: Car1,
       description: "Luxurious sedan with leather seats, GPS navigation, and sunroof.",
-      price: "5000Rs per day",
+      price: "4000Rs per day",
       availability: "Available from 2024-04-25",
       location: "Cantt",
     },
@@ -92,7 +92,7 @@ const AvailableCars = () => {
       id: 2,
       image: Car2,
       description: "Compact SUV perfect for outdoor adventures, with spacious interior and all-wheel drive.",
-      price: "3000Rs per day",
+      price: "5000Rs per day",
       availability: "Available from 2024-04-27",
       location: "Bahria Town",
     },
@@ -107,8 +107,8 @@ const AvailableCars = () => {
     {
       id: 4,
       image: Car4,
-      description: "Luxury sports car with high-performance engine and sleek design, perfect for thrill-seekers.",
-      price: "7000Rs per day",
+      description: "Affordable everyday car for your travels, with modern features and great mileage.",
+      price: "2500Rs per day",
       availability: "Available from 2024-05-02",
       location: "Gulberg", // New car location
     },

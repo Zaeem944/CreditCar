@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import Background from '../design/assets/background5.jpg';
 
 const AddCarPage = styled.div`
   background-color: #f0f8ff; /* Light turquoise background */
@@ -85,7 +86,14 @@ const AddCar = () => {
   };
 
   return (
-    <AddCarPage>
+    <AddCarPage style={{
+      backgroundImage: `url(${Background})`,
+      margin: '0',
+      padding: '0',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    
+    }}>
       <Form onSubmit={handleSubmit}>
         <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>Add a Car for Rental</h1>
         <FormGroup>

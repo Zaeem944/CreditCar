@@ -83,7 +83,7 @@ const Home = () => {
       backgroundRepeat: 'no-repeat',
     }}>
       <div style={{
-        backgroundColor: 'rgba(255, 255, 255, 0.5)',
+        backgroundColor: 'rgba(255, 255, 255, 1)',
         backdropFilter: 'blur(10px)',
         padding: '40px',
         borderRadius: '8px',
@@ -92,7 +92,6 @@ const Home = () => {
         maxWidth: '600px',
       
       }}>
-        <BiggerHeading>Welcome to CreditCar</BiggerHeading>
         <HeadingsContainer>
           <Welcome>Welcome Huzaifa</Welcome>
           <Heading>Will you be renting a car, or adding one?</Heading>

@@ -49,8 +49,11 @@ const ConfirmationPage = () => {
     <ConfirmationPageContainer>
       <ConfirmationBubble>
         <ConfirmationMessage>
-          Your request has been processed. Our AI assitant will get back to you shortly.
+          Your request has been processed. Our AI assistant will get back to you shortly.
         </ConfirmationMessage>
+        <StyledLink to="/home" style={{
+          marginRight: '10px'
+        }}>Chat with Lender</StyledLink>
         <StyledLink to="/home">Back to Home</StyledLink>
       </ConfirmationBubble>
     </ConfirmationPageContainer>
